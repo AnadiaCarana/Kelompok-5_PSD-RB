@@ -23,24 +23,27 @@ LINE = "#E0D8D0"
 MUTED = "#7A8E90"
 BG_SOFT = WARM_WHITE
 SIDEBAR_BG = "#FFFFFF"
-SIDEBAR_TEXT = "#4A6467"
 SIDEBAR_ACTIVE_BG = DEEP_TEAL
 
 HERO_BG = "#E8DDD4"
 
-BLUE = CARE_TEAL
-DANGER = CORAL
-SAFE = DEEP_TEAL
-AMBER = CORAL
-TEAL = CARE_TEAL
-
 FEATURES = ['Glucose', 'BMI', 'Age', 'Pregnancies', 'DiabetesPedigreeFunction', 'BloodPressure']
-LABEL = {'Glucose': 'Glukosa 2 jam (mg/dl)', 'BMI': 'BMI (kg/m²)', 'Age': 'Usia (tahun)',
-         'Pregnancies': 'Jumlah kehamilan', 'DiabetesPedigreeFunction': 'Riwayat keluarga (DPF)',
-         'BloodPressure': 'Tekanan darah diastolik (mmHg)'}
-RANGE = {'Pregnancies': (0, 13, 3, 1), 'Glucose': (44, 198, 116, 1), 'BloodPressure': (44, 104, 72, 1),
-         'BMI': (18.2, 50.0, 32.1, 0.1), 'DiabetesPedigreeFunction': (0.078, 1.191, 0.355, 0.001),
-         'Age': (21, 66, 29, 1)}
+LABEL = {
+    'Glucose': 'Glukosa 2 jam (mg/dl)', 
+    'BMI': 'BMI (kg/m²)', 
+    'Age': 'Usia (tahun)',
+    'Pregnancies': 'Jumlah kehamilan', 
+    'DiabetesPedigreeFunction': 'Riwayat keluarga (DPF)',
+    'BloodPressure': 'Tekanan darah diastolik (mmHg)'
+}
+RANGE = {
+    'Pregnancies': (0, 13, 3, 1), 
+    'Glucose': (44, 198, 116, 1), 
+    'BloodPressure': (44, 104, 72, 1),
+    'BMI': (18.2, 50.0, 32.1, 0.1), 
+    'DiabetesPedigreeFunction': (0.078, 1.191, 0.355, 0.001),
+    'Age': (21, 66, 29, 1)
+}
 
 # ---------------------------------------------------------------------------
 # CSS Kustom
@@ -62,7 +65,7 @@ h1, h2, h3 {{ color: {INK}; font-weight: 800; letter-spacing: -0.02em; }}
 h1 {{ font-size: 2.4rem; }}
 .lede {{ color: {MUTED}; font-size: 1.05rem; max-width: 65ch; font-weight: 400; }}
 
-/* ===================== HERO BOX ===================== */
+/* HERO BOX */
 .hero-box {{
     background: {HERO_BG};
     border-radius: 16px;
@@ -82,14 +85,14 @@ h1 {{ font-size: 2.4rem; }}
     font-weight: 400;
 }}
 
-/* ===================== SECTION DIVIDER ===================== */
+/* SECTION DIVIDER */
 .section-divider {{
     border: none;
     border-top: 1.5px solid {LINE};
     margin: 2rem 0 1.6rem 0;
 }}
 
-/* ===================== SIDEBAR ===================== */
+/* SIDEBAR */
 [data-testid="stSidebar"] {{
     background: {SIDEBAR_BG};
     border-right: 1px solid {LINE};
@@ -99,7 +102,6 @@ h1 {{ font-size: 2.4rem; }}
     padding-top: 1.2rem;
 }}
 
-/* Logo area */
 .sb-logo {{
     display: flex;
     align-items: center;
@@ -119,7 +121,6 @@ h1 {{ font-size: 2.4rem; }}
     font-weight: 700; font-size: 1.05rem; color: {INK};
 }}
 
-/* Nav section label */
 .sb-nav-label {{
     font-size: 0.68rem;
     font-weight: 700;
@@ -129,7 +130,6 @@ h1 {{ font-size: 2.4rem; }}
     padding: 1.1rem 0.9rem 0.5rem 0.9rem;
 }}
 
-/* Nav items */
 [data-testid="stSidebar"] .stRadio > div {{
     gap: 2px;
 }}
@@ -162,13 +162,12 @@ h1 {{ font-size: 2.4rem; }}
     font-weight: 600 !important;
 }}
 
-/* Footer */
 .sb-foot {{
     color: {MUTED}; font-size: 0.78rem; line-height: 1.6;
 }}
 .sb-foot a {{ color: {CARE_TEAL}; text-decoration: none; }}
 
-/* ===================== INPUTS ===================== */
+/* INPUTS */
 input[type="number"] {{
     border-radius: 12px !important;
     border: 1px solid #C8DFE0 !important;
@@ -177,7 +176,7 @@ input[type="number"] {{
     padding: 10px !important;
 }}
 
-/* ===================== PRIMARY BUTTON ===================== */
+/* BUTTON */
 .stButton > button[kind="primary"],
 button[kind="primary"],
 [data-testid="stFormSubmitButton"] > button {{
@@ -195,7 +194,7 @@ button[kind="primary"],
     box-shadow: 0 6px 20px rgba(217, 127, 108, 0.6) !important;
 }}
 
-/* ===================== READING PANEL ===================== */
+/* READING PANEL */
 .reading {{
     background: #FFFFFF;
     padding: 1.8rem 1.6rem 1.5rem;
@@ -214,11 +213,11 @@ button[kind="primary"],
                border-radius: 4px; transform: translateX(-3px); box-shadow: 0 2px 4px rgba(0,0,0,0.2); }}
 .scale .tick {{ position: absolute; top: 18px; font-size: 0.75rem; color: {MUTED}; font-weight: 600; transform: translateX(-50%); }}
 
-/* ===================== EMPTY STATE ===================== */
+/* EMPTY STATE */
 .empty {{ border: 2px dashed #B8D8DA; border-radius: 15px; padding: 2.5rem 1.6rem;
           color: {MUTED}; background: rgba(255,255,255,0.6); text-align: center; }}
 
-/* ===================== FORM ===================== */
+/* FORM */
 [data-testid="stForm"] {{
     border: none !important;
     background: #FFFFFF !important;
@@ -227,7 +226,7 @@ button[kind="primary"],
     box-shadow: 0 10px 40px rgba(25, 90, 95, 0.08) !important;
 }}
 
-/* ===================== TABS ===================== */
+/* TABS */
 [data-testid="stTabs"] button {{
     border-radius: 20px;
     border: 1px solid #C8DFE0;
@@ -244,51 +243,52 @@ button[kind="primary"],
 </style>
 """, unsafe_allow_html=True)
 
-
 # ---------------------------------------------------------------------------
 # Pemuatan model dan data
 # ---------------------------------------------------------------------------
+STATUS_COLORS = {'Diabetes': CORAL, 'Non-Diabetes': CARE_TEAL}
+
 @st.cache_resource
 def load_diabetes_model():
-    with open("generate_diabetes.pkl", "rb") as file:
+    model_path = "generate_diabetes.pkl"
+    if not os.path.exists(model_path):
+        st.error(f"File model `{model_path}` tidak ditemukan.")
+        return None
+    with open(model_path, "rb") as file:
         return pickle.load(file)
-
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data.csv", index_col=0)
+    data_path = "data.csv"
+    if not os.path.exists(data_path):
+        st.error(f"File `{data_path}` tidak ditemukan.")
+        return pd.DataFrame()
+    df = pd.read_csv(data_path, index_col=0)
     df['Status'] = df['Outcome']
     df['Outcome'] = (df['Outcome'] == 'Diabetes').astype(int)
     return df
 
-
 @st.cache_data
 def load_report():
-    if not os.path.exists("model_report.json"):
+    report_path = "model_report.json"
+    if not os.path.exists(report_path):
         return None
-    with open("model_report.json") as f:
+    with open(report_path) as f:
         return json.load(f)
 
-
 def style_fig(fig, height=360):
-    fig.update_layout(height=height, margin=dict(l=10, r=10, t=30, b=10),
-                      paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#FFFFFF",
-                      font=dict(family="Inter, sans-serif", color=INK, size=13),
-                      legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0, title=None))
+    fig.update_layout(
+        height=height, margin=dict(l=10, r=10, t=30, b=10),
+        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#FFFFFF",
+        font=dict(family="Inter, sans-serif", color=INK, size=13),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0, title=None)
+    )
     fig.update_xaxes(gridcolor="#E8F0F1", linecolor=LINE)
     fig.update_yaxes(gridcolor="#E8F0F1", linecolor=LINE)
     return fig
 
-
-STATUS_COLORS = {'Diabetes': CORAL, 'Non-Diabetes': CARE_TEAL}
-
-
-# ---------------------------------------------------------------------------
-# Halaman 1: Skrining pasien
-# ---------------------------------------------------------------------------
 def fmt(x, d=2):
     return f"{x:.{d}f}".replace(".", ",")
-
 
 def reading_panel(proba, youden):
     high = proba >= 0.5
@@ -309,7 +309,9 @@ def reading_panel(proba, youden):
       </div>
     </div>""", unsafe_allow_html=True)
 
-
+# ---------------------------------------------------------------------------
+# Halaman 1: Skrining pasien
+# ---------------------------------------------------------------------------
 def page_screening():
     report = load_report()
     youden = report['youden_threshold'].get(report['best_model'], 0.4) if report else 0.4
@@ -355,9 +357,11 @@ def page_screening():
                 if 'last_input' not in st.session_state:
                     st.markdown('<div class="empty"><strong>Belum ada data.</strong><br>Silakan lengkapi profil dan statistik vital di sebelah kiri, lalu tekan tombol <em>Proses Prediksi</em>.</div>', unsafe_allow_html=True)
                 else:
-                    patient = pd.DataFrame([st.session_state['last_input']])[FEATURES]
-                    proba = float(load_diabetes_model().predict_proba(patient)[0, 1])
-                    reading_panel(proba, youden)
+                    model = load_diabetes_model()
+                    if model is not None:
+                        patient = pd.DataFrame([st.session_state['last_input']])[FEATURES]
+                        proba = float(model.predict_proba(patient)[0, 1])
+                        reading_panel(proba, youden)
 
     with tab_batch:
         st.markdown('<p class="note">Unggah file CSV dengan kolom: ' + ", ".join(FEATURES) +
@@ -365,36 +369,43 @@ def page_screening():
         template = pd.DataFrame([{f: RANGE[f][2] for f in FEATURES}])
         st.download_button("Unduh contoh format CSV", template.to_csv(index=False), "contoh_input.csv", "text/csv")
         uploaded_file = st.file_uploader("Pilih file CSV", type=["csv"], key="diab_csv")
+        
         if uploaded_file is not None:
             input_df = pd.read_csv(uploaded_file)
             missing = [c for c in FEATURES if c not in input_df.columns]
             if missing:
                 st.error(f"Kolom berikut tidak ditemukan di file: {', '.join(missing)}. Samakan nama kolom dengan contoh format CSV.")
                 return
+            
             X = input_df[FEATURES].apply(pd.to_numeric, errors='coerce')
             bad = X.isna().any(axis=1)
             if bad.any():
                 st.warning(f"{int(bad.sum())} baris berisi nilai kosong atau bukan angka dan dilewati.")
+            
             X = X[~bad]
             if X.empty:
                 st.error("Tidak ada baris yang bisa dihitung.")
                 return
-            proba = load_diabetes_model().predict_proba(X)[:, 1]
-            out = X.copy()
-            out['Probabilitas diabetes'] = proba.round(3)
-            out['Hasil'] = np.where(proba >= 0.5, 'Perlu pemeriksaan lanjutan', 'Risiko rendah')
-            k1, k2 = st.columns(2)
-            k1.metric("Pasien dihitung", len(out))
-            k2.metric("Perlu pemeriksaan lanjutan", int((proba >= 0.5).sum()))
-            st.dataframe(out, use_container_width=True)
-            st.download_button("Unduh hasil", out.to_csv(index=False), "hasil_skrining.csv", "text/csv")
-
+            
+            model = load_diabetes_model()
+            if model is not None:
+                proba = model.predict_proba(X)[:, 1]
+                out = X.copy()
+                out['Probabilitas diabetes'] = proba.round(3)
+                out['Hasil'] = np.where(proba >= 0.5, 'Perlu pemeriksaan lanjutan', 'Risiko rendah')
+                k1, k2 = st.columns(2)
+                k1.metric("Pasien dihitung", len(out))
+                k2.metric("Perlu pemeriksaan lanjutan", int((proba >= 0.5).sum()))
+                st.dataframe(out, use_container_width=True)
+                st.download_button("Unduh hasil", out.to_csv(index=False), "hasil_skrining.csv", "text/csv")
 
 # ---------------------------------------------------------------------------
 # Halaman 2: Data pasien (EDA)
 # ---------------------------------------------------------------------------
 def page_data():
     df = load_data()
+    if df.empty:
+        return
 
     st.markdown('''
     <div class="hero-box">
@@ -435,7 +446,6 @@ def page_data():
 
     with st.expander("Lihat tabel data"):
         st.dataframe(df[FEATURES + ['Status']], use_container_width=True)
-
 
 # ---------------------------------------------------------------------------
 # Halaman 3: Performa model
@@ -519,7 +529,6 @@ def page_model():
         fig.update_xaxes(title="Feature importance" if report['importance_type'] == 'feature_importances_' else "Koefisien")
         st.plotly_chart(style_fig(fig, 320), use_container_width=True)
 
-
 # ---------------------------------------------------------------------------
 # Navigasi
 # ---------------------------------------------------------------------------
@@ -543,7 +552,7 @@ def main():
         <div style="height:1.2rem"></div>
         <hr style="border:none;border-top:1px solid {LINE};margin:0.5rem 0 1rem;">
         <p class="sb-foot">Dibuat oleh: Kelompok 5 RB <br>
-        Data: <a href="https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database">
+        Data: <a href="https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database" target="_blank">
         Pima Indians Diabetes Database (Kaggle)</a></p>
         <p class="sb-foot">Alat bantu skrining, bukan pengganti diagnosis tenaga kesehatan.</p>
         ''', unsafe_allow_html=True)
@@ -554,7 +563,6 @@ def main():
         page_data()
     else:
         page_model()
-
 
 if __name__ == "__main__":
     main()
